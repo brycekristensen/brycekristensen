@@ -1,0 +1,14 @@
+name: Call Claude
+on:
+  push:
+    branches: [main]
+
+jobs:
+  call-claude:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      # your step that requests the OIDC token and calls Claude goes here
